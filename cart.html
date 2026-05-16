@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your AURACAL cart, update quantities, remove items, and view your order total.">
+  <title>AURACAL | Cart</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-cart">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-site-header>
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-mark" href="index.html" aria-label="AURACAL home">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <span>AURACAL</span>
+      </a>
+
+      <button class="nav-toggle icon-button" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav-toggle>
+        <span class="sr-only">Open navigation</span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-tool" type="button" data-modal-open="fit-modal">Smart Fit-On</button>
+          <button class="nav-tool" type="button" data-modal-open="size-modal">Size Chart</button>
+          <a class="cart-link active" href="cart.html" aria-label="Open cart">
+            <span>Cart</span>
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+          <a class="nav-account" href="auth.html">Sign In</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="cart-hero" aria-labelledby="cart-title">
+      <div class="cart-hero-content reveal">
+        <p class="eyebrow">AURACAL checkout</p>
+        <h1 id="cart-title">Cart review.</h1>
+        <p>Refine quantities, check estimated totals, and keep your fit tools close before checkout.</p>
+      </div>
+      <div class="cart-hero-card glass-panel reveal">
+        <span>Secure preview</span>
+        <p>Complimentary shipping on orders over $350.</p>
+      </div>
+    </section>
+
+    <section class="cart-section" aria-labelledby="cart-items-title">
+      <div class="cart-layout">
+        <div class="cart-items-panel reveal">
+          <div class="cart-panel-heading">
+            <div>
+              <p class="eyebrow">Selected pieces</p>
+              <h2 id="cart-items-title">Your AURACAL system</h2>
+            </div>
+            <button class="text-button" type="button" data-clear-cart>Clear cart</button>
+          </div>
+
+          <div class="cart-lines" data-cart-lines aria-live="polite"></div>
+        </div>
+
+        <aside class="cart-summary-panel reveal" aria-labelledby="cart-summary-title">
+          <p class="eyebrow">Order summary</p>
+          <h2 id="cart-summary-title">Total</h2>
+          <div data-cart-summary aria-live="polite"></div>
+          <div class="cart-assist">
+            <button type="button" data-modal-open="fit-modal">Run Smart Fit-On</button>
+            <button type="button" data-modal-open="size-modal">Open size chart</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section cart-recommendations" aria-labelledby="cart-recs-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Complete the system</p>
+        <h2 id="cart-recs-title">Designed to layer cleanly.</h2>
+        <a class="text-link" href="shop.html">Continue shopping</a>
+      </div>
+      <div class="product-grid" data-featured-products aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand-mark footer-brand" href="index.html" aria-label="AURACAL home">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <span>AURACAL</span>
+      </a>
+      <p>Minimal tech-wear, measured for motion, built with lighter materials.</p>
+    </div>
+    <form class="newsletter-form" data-newsletter-form>
+      <label for="newsletter-email">Private drop access</label>
+      <div>
+        <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Join</button>
+      </div>
+      <p class="form-note" data-newsletter-note aria-live="polite"></p>
+    </form>
+  </footer>
+
+  <div class="modal-overlay" data-modal="fit-modal" role="dialog" aria-modal="true" aria-labelledby="fit-modal-title" hidden>
+    <div class="modal-panel fit-modal-panel">
+      <button class="modal-close icon-button" type="button" data-modal-close aria-label="Close Smart Fit-On">x</button>
+      <div class="modal-heading">
+        <p class="eyebrow">AURACAL Smart Fit-On</p>
+        <h2 id="fit-modal-title">Measure once. Move naturally.</h2>
+        <p>Our quick recommender maps your proportions against AURACAL garment ease.</p>
+      </div>
+
+      <form class="fit-tool" data-fit-form>
+        <div class="input-grid">
+          <label class="field">
+            <span>Height</span>
+            <input type="number" name="height" min="130" max="220" value="178" inputmode="decimal" required>
+            <small>cm</small>
+          </label>
+          <label class="field">
+            <span>Weight</span>
+            <input type="number" name="weight" min="35" max="180" value="74" inputmode="decimal" required>
+            <small>kg</small>
+          </label>
+          <label class="field">
+            <span>Body type</span>
+            <select name="bodyType" required>
+              <option value="slim">Slim</option>
+              <option value="athletic" selected>Athletic</option>
+              <option value="average">Average</option>
+              <option value="broad">Broad</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="fit-result" data-fit-result aria-live="polite">
+          <span class="fit-size">M</span>
+          <div>
+            <p class="fit-confidence">Precision confidence: 94%</p>
+            <p class="fit-note">Balanced profile detected. Size M should feel clean through the chest with enough ease for one base layer.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" data-modal="size-modal" role="dialog" aria-modal="true" aria-labelledby="size-modal-title" hidden>
+    <div class="modal-panel size-modal-panel">
+      <button class="modal-close icon-button" type="button" data-modal-close aria-label="Close size chart">x</button>
+      <div class="modal-heading">
+        <p class="eyebrow">Dynamic size chart</p>
+        <h2 id="size-modal-title">AURACAL body measurements</h2>
+        <p>Switch between centimeters and inches. Measurements are body ranges; garments include technical ease.</p>
+      </div>
+
+      <div class="unit-switch" role="group" aria-label="Measurement unit">
+        <button class="active" type="button" data-unit="cm">cm</button>
+        <button type="button" data-unit="in">in</button>
+      </div>
+
+      <div class="size-table-wrap">
+        <table class="size-table">
+          <caption>Recommended body measurement ranges by AURACAL size</caption>
+          <thead>
+            <tr>
+              <th scope="col">Size</th>
+              <th scope="col">Chest</th>
+              <th scope="col">Waist</th>
+              <th scope="col">Hip</th>
+              <th scope="col">Height</th>
+            </tr>
+          </thead>
+          <tbody data-size-table></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

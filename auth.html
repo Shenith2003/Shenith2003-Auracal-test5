@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in or create an AURACAL account for private drop access, saved cart state, and fit preferences.">
+  <title>AURACAL | Account</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-auth">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-site-header>
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-mark" href="index.html" aria-label="AURACAL home">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <span>AURACAL</span>
+      </a>
+
+      <button class="nav-toggle icon-button" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav-toggle>
+        <span class="sr-only">Open navigation</span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-tool" type="button" data-modal-open="fit-modal">Smart Fit-On</button>
+          <button class="nav-tool" type="button" data-modal-open="size-modal">Size Chart</button>
+          <a class="cart-link" href="cart.html" aria-label="Open cart">
+            <span>Cart</span>
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+          <a class="nav-account active" href="auth.html">Sign In</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="auth-page" aria-labelledby="auth-title">
+      <div class="auth-background" data-parallax="0.05" aria-hidden="true"></div>
+
+      <div class="auth-intro reveal">
+        <p class="eyebrow">AURACAL access</p>
+        <h1 id="auth-title">Enter the private layer.</h1>
+        <p>Save your cart, preserve fit preferences, and receive early access to limited technical drops.</p>
+      </div>
+
+      <section class="auth-shell reveal" data-auth-shell data-auth-state="login" aria-label="AURACAL account forms">
+        <div class="auth-visual">
+          <span>Member layer</span>
+          <h2>Precision fit follows you.</h2>
+          <p>AURACAL accounts keep sizing signals and selected pieces available across the collection.</p>
+          <div class="auth-metrics">
+            <div>
+              <strong>04</strong>
+              <span>Saved body profiles</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>Private drop window</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <div class="auth-switch" role="group" aria-label="Choose account mode">
+            <button class="active" type="button" data-auth-mode="login" aria-pressed="true">Sign in</button>
+            <button type="button" data-auth-mode="register" aria-pressed="false">Create</button>
+            <span aria-hidden="true"></span>
+          </div>
+
+          <div class="auth-forms">
+            <form class="auth-form" data-auth-form="login">
+              <div class="form-heading">
+                <p class="eyebrow">Welcome back</p>
+                <h2>Sign in</h2>
+              </div>
+
+              <label class="floating-field">
+                <input type="email" name="email" placeholder=" " autocomplete="email" required>
+                <span>Email address</span>
+              </label>
+
+              <label class="floating-field">
+                <input type="password" name="password" placeholder=" " autocomplete="current-password" minlength="8" required>
+                <span>Password</span>
+              </label>
+
+              <div class="auth-row">
+                <label class="check-field">
+                  <input type="checkbox" name="remember">
+                  <span>Remember me</span>
+                </label>
+                <a href="#register">Need access?</a>
+              </div>
+
+              <button class="button button-primary" type="submit">Enter account</button>
+            </form>
+
+            <form class="auth-form" data-auth-form="register" hidden>
+              <div class="form-heading">
+                <p class="eyebrow">Private drop access</p>
+                <h2>Create account</h2>
+              </div>
+
+              <label class="floating-field">
+                <input type="text" name="name" placeholder=" " autocomplete="name" required>
+                <span>Full name</span>
+              </label>
+
+              <label class="floating-field">
+                <input type="email" name="email" placeholder=" " autocomplete="email" required>
+                <span>Email address</span>
+              </label>
+
+              <label class="floating-field">
+                <input type="password" name="password" placeholder=" " autocomplete="new-password" minlength="8" required>
+                <span>Password</span>
+              </label>
+
+              <label class="floating-field">
+                <input type="password" name="confirmPassword" placeholder=" " autocomplete="new-password" minlength="8" required>
+                <span>Confirm password</span>
+              </label>
+
+              <label class="check-field">
+                <input type="checkbox" name="updates" checked>
+                <span>Receive private drop notes</span>
+              </label>
+
+              <button class="button button-primary" type="submit">Create account</button>
+            </form>
+          </div>
+
+          <p class="auth-message" data-auth-message aria-live="polite"></p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand-mark footer-brand" href="index.html" aria-label="AURACAL home">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <span>AURACAL</span>
+      </a>
+      <p>Minimal tech-wear, measured for motion, built with lighter materials.</p>
+    </div>
+    <form class="newsletter-form" data-newsletter-form>
+      <label for="newsletter-email">Private drop access</label>
+      <div>
+        <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required>
+        <button type="submit">Join</button>
+      </div>
+      <p class="form-note" data-newsletter-note aria-live="polite"></p>
+    </form>
+  </footer>
+
+  <div class="modal-overlay" data-modal="fit-modal" role="dialog" aria-modal="true" aria-labelledby="fit-modal-title" hidden>
+    <div class="modal-panel fit-modal-panel">
+      <button class="modal-close icon-button" type="button" data-modal-close aria-label="Close Smart Fit-On">x</button>
+      <div class="modal-heading">
+        <p class="eyebrow">AURACAL Smart Fit-On</p>
+        <h2 id="fit-modal-title">Measure once. Move naturally.</h2>
+        <p>Our quick recommender maps your proportions against AURACAL garment ease.</p>
+      </div>
+
+      <form class="fit-tool" data-fit-form>
+        <div class="input-grid">
+          <label class="field">
+            <span>Height</span>
+            <input type="number" name="height" min="130" max="220" value="178" inputmode="decimal" required>
+            <small>cm</small>
+          </label>
+          <label class="field">
+            <span>Weight</span>
+            <input type="number" name="weight" min="35" max="180" value="74" inputmode="decimal" required>
+            <small>kg</small>
+          </label>
+          <label class="field">
+            <span>Body type</span>
+            <select name="bodyType" required>
+              <option value="slim">Slim</option>
+              <option value="athletic" selected>Athletic</option>
+              <option value="average">Average</option>
+              <option value="broad">Broad</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="fit-result" data-fit-result aria-live="polite">
+          <span class="fit-size">M</span>
+          <div>
+            <p class="fit-confidence">Precision confidence: 94%</p>
+            <p class="fit-note">Balanced profile detected. Size M should feel clean through the chest with enough ease for one base layer.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" data-modal="size-modal" role="dialog" aria-modal="true" aria-labelledby="size-modal-title" hidden>
+    <div class="modal-panel size-modal-panel">
+      <button class="modal-close icon-button" type="button" data-modal-close aria-label="Close size chart">x</button>
+      <div class="modal-heading">
+        <p class="eyebrow">Dynamic size chart</p>
+        <h2 id="size-modal-title">AURACAL body measurements</h2>
+        <p>Switch between centimeters and inches. Measurements are body ranges; garments include technical ease.</p>
+      </div>
+
+      <div class="unit-switch" role="group" aria-label="Measurement unit">
+        <button class="active" type="button" data-unit="cm">cm</button>
+        <button type="button" data-unit="in">in</button>
+      </div>
+
+      <div class="size-table-wrap">
+        <table class="size-table">
+          <caption>Recommended body measurement ranges by AURACAL size</caption>
+          <thead>
+            <tr>
+              <th scope="col">Size</th>
+              <th scope="col">Chest</th>
+              <th scope="col">Waist</th>
+              <th scope="col">Hip</th>
+              <th scope="col">Height</th>
+            </tr>
+          </thead>
+          <tbody data-size-table></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
